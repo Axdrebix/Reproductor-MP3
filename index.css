@@ -12,6 +12,13 @@ body {
     background-image: linear-gradient(to bottom, rgb(134, 133, 162), rgb(193, 185, 211));
 }
 
+#art-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
 #img-portada {
     width: 300px;
     height: 300px;
@@ -52,18 +59,21 @@ body {
 }
 
 #seleccionar-musica {
-  display: inline-block;
-  padding: 12px 24px;
+  display: block;
+  margin: 20px auto;
+  padding: 8px 16px;
+  font-size: 14px;
   border: 1px solid #4f4f4f;
   border-radius: 4px;
   transition: all 0.2s ease-in;
   position: relative;
   overflow: hidden;
-  font-size: 19px;
   cursor: pointer;
   color: black;
   z-index: 1;
+  width: fit-content;
 }
+
 
 #seleccionar-musica:before {
   content: "";
