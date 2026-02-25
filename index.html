@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Reproductor de Música MP3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="index.css">
         <link rel="icon" type="image/webp" href="./multimedia/imagenes/yes-cat-thumbs-up.png">
     </head>
@@ -27,20 +28,24 @@
                 <ul id="ul-canciones"></ul>
             </div>
 
-            <div id="portada"><img id="img-portada" src="" alt="Portada"></div>
-            <div id="nombre-cancion">Título de la canción</div>
-            <div id="artista">Nombre del Artista</div>
+            <div id="portada"><img id="img-portada" title="Portada de la canción" src="" alt="Portada"></div>
+            <div id="nombre-cancion" title="Titulo de la canción">Título de la canción</div>
+            <div id="artista" title="Artista">Nombre del Artista</div>
         </section>
         <section id="control-box">
             <input type="file" id="input-archivo" accept="audio/*" style="display:none">
-            <button id="seleccionar-musica">Seleccionar Música</button>
+            <div id="botones-seleccion">
+                <button id="seleccionar-musica">Seleccionar Música</button>
+
+            </div>
             <div id="botones-reproductor">
-                <button id="anterior"><img src="./multimedia/imagenes/icono_anterior-removebg-preview.png" alt="Ant"></button>
+                <button id="anterior"><img src="./multimedia/imagenes/icono_anterior-removebg-preview.png" title="Anterior" alt="Ant"></button>
     
-                <button id="reproducir"><img src="./multimedia/imagenes/icono_reproducir-removebg-preview.png" alt="reproducir"></button>
-                <button id="pausar" style="display: none;"><img src="./multimedia/imagenes/icono_pausa-removebg-preview.png" alt="Pausa"></button>
+                <button id="reproducir"><img src="./multimedia/imagenes/icono_reproducir-removebg-preview.png" title="Reproducir" alt="reproducir"></button>
+                
+                <button id="pausar" style="display: none;"><img src="./multimedia/imagenes/icono_pausa-removebg-preview.png" title="Pausar" alt="Pausa"></button>
     
-                <button id="siguiente"><img src="./multimedia/imagenes/icono_siguiente-removebg-preview.png" alt="Sig"></button>
+                <button id="siguiente"><img src="./multimedia/imagenes/icono_siguiente-removebg-preview.png" title="Siguiente" alt="Sig"></button>
             </div>
         </section>
         <section id="status-box">
@@ -50,14 +55,14 @@
                 <span id="tiempo-total">0:00</span>
             </div>
             <div id="volume-container">
-                <span><img src="./multimedia/imagenes/icono volumen bajo.png"></span>
+                <span><img src="./multimedia/imagenes/icono volumen bajo.png" title="Menos volumen"></span>
                 <input type="range" id="control-volumen" min="0" max="1" step="0.1" value="0.5">
-                <span><img src="./multimedia/imagenes/icono volumen alto.png"></span>
+                <span><img src="./multimedia/imagenes/icono volumen alto.png" title="Más volumen"></span>
             </div>
         </section>
         <script src="index.js"></script>
         <footer>
-            <p>Desarrollado por Andrés Gómez</p>
+            <p title=";)">Desarrollado por Andrés Gómez</p>
         </footer>
     </body>
 </html>

@@ -12,9 +12,18 @@ body {
     background-image: linear-gradient(to bottom, rgb(134, 133, 162), rgb(193, 185, 211));
 }
 
+#art-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
 #img-portada {
-    width: 300px;
-    height: 300px;
+    width: 90vw;      
+    max-width: 300px;  
+    aspect-ratio: 1/1;  
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,22 +57,25 @@ body {
 }
 
 #volume-container img {
-    block-size: 45px;
+    block-size: 35px;
 }
 
 #seleccionar-musica {
-  display: inline-block;
-  padding: 12px 24px;
+  display: block;
+  margin: 20px auto;
+  padding: 8px 16px;
+  font-size: 14px;
   border: 1px solid #4f4f4f;
   border-radius: 4px;
   transition: all 0.2s ease-in;
   position: relative;
   overflow: hidden;
-  font-size: 19px;
   cursor: pointer;
   color: black;
   z-index: 1;
+  width: fit-content;
 }
+
 
 #seleccionar-musica:before {
   content: "";
@@ -170,4 +182,35 @@ footer {
     text-align: center;
     padding: 20px;
     color: rgb(39, 39, 39);
+}
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #img-portada {
+        width: 80vw;
+    }
+
+    #botones-reproductor {
+        gap: 15px;
+    }
+
+    #botones-reproductor img {
+        block-size: 40px;
+    }
+
+    #progress-container {
+        width: 95%; 
+    }
+
+    #control-volumen {
+        width: 120px;
+    }
+
+    #seleccionar-musica {
+        width: 90%;
+        padding: 12px;
+        font-size: 16px;
+    }
 }
